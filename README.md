@@ -15,7 +15,7 @@ I downloaded the Dictionary file for the survey as well, which I placed in this 
 
 From this, I was able to write the [`import.sql`](./import.sql) script, which creates an `ipeds` database, a `completions` table, and imports the data from the CSV file into the table.
 
-NOTE: If you plan to run this on your own computer, open up [`import.sql`](./import.sql) and edit the path on line 73 to match the path where you checked out the repository. Unfortunately Postgres doesn't support relative paths ¯\_(ツ)_/¯
+_**NOTE**: If you plan to run this on your own computer, open up [`import.sql`](./import.sql) and edit the path on line 73 to match the path where you checked out the repository. Unfortunately Postgres doesn't support relative paths ¯\_(ツ)_/¯_
 
 Then run:
 
