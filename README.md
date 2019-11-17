@@ -11,6 +11,8 @@ The `c2018_a.csv` file in this repository is a copy of one of these files for de
 
 I downloaded the Dictionary file for the survey as well, which I placed in this repo under `c2018_a.xlsx`. It describes what the abbreviated column headers in the CSV mean (`CHISPT` = “Hispanic or Latino total”), as well as describing the data type for each column.
 
+## Create a table and import CSV data
+
 From this, I was able to write the `import.sql` script, which creates an `ipeds` database, a `completions` table, and imports the data from the CSV file into the table.
 
 NOTE: If you plan to run this on your own computer, open up `import.sql` and edit the path on line 73 to match the path where you checked out the repository. Unfortunately Postgres doesn't support relative paths ¯\_(ツ)_/¯
@@ -20,6 +22,8 @@ Then run:
 ```bash
 psql -f import.sql
 ```
+
+## Query the database
 
 After that, you should be able to connect to the database and query away! For example, let's look at Computer Science & Information Technology degrees awarded at New York University, and how those break down over sexes:
 
