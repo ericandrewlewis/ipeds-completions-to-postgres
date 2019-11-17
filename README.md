@@ -7,15 +7,15 @@ file into a Postgres database table.
 
 Data for each year of the Completions survey is available on [this IPEDS page](https://nces.ed.gov/ipeds/use-the-data) under the Survey Data section. In Select download option, I chose the “Complete data files” option, which will deliver you CSV files. In the list of data files, you’ll see the data into separate files for each year. I downloaded the “Awards/degrees conferred by program (6-digit CIP code), award level, race/ethnicity, and gender” data file.
 
-The `c2018_a.csv` file in this repository is a copy of one of these files for demonstration purposes.
+The [`c2018_a.csv`](./c2018_a.csv) file in this repository is a copy of one of these files for demonstration purposes.
 
-I downloaded the Dictionary file for the survey as well, which I placed in this repo under `c2018_a.xlsx`. It describes what the abbreviated column headers in the CSV mean (`CHISPT` = “Hispanic or Latino total”), as well as describing the data type for each column.
+I downloaded the Dictionary file for the survey as well, which I placed in this repo under [`c2018_a.xlsx`](c2018_a.xlsx). It describes what the abbreviated column headers in the CSV mean (`CHISPT` = “Hispanic or Latino total”), as well as describing the data type for each column.
 
 ## Create a table and import CSV data
 
-From this, I was able to write the `import.sql` script, which creates an `ipeds` database, a `completions` table, and imports the data from the CSV file into the table.
+From this, I was able to write the [`import.sql`](./import.sql) script, which creates an `ipeds` database, a `completions` table, and imports the data from the CSV file into the table.
 
-NOTE: If you plan to run this on your own computer, open up `import.sql` and edit the path on line 73 to match the path where you checked out the repository. Unfortunately Postgres doesn't support relative paths ¯\_(ツ)_/¯
+NOTE: If you plan to run this on your own computer, open up [`import.sql`](./import.sql) and edit the path on line 73 to match the path where you checked out the repository. Unfortunately Postgres doesn't support relative paths ¯\_(ツ)_/¯
 
 Then run:
 
