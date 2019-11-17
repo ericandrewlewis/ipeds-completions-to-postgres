@@ -19,7 +19,7 @@ To create the database `ipeds` which will hold the various tables, run
 psql -f create_db.sql
 ```
 
-## Create a table and import CSV data
+## Create the `completions` table and import CSV data
 
 From this, I was able to write the [`import_completions.sql`](./import_completions.sql) script, which creates an `ipeds` database, a `completions` table, and imports the data from the CSV file into the table.
 
