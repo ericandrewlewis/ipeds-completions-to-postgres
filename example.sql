@@ -6,7 +6,9 @@ SELECT
   CTOTALM as male_graduates,
   CTOTALW as female_graduates,
   CASE WHEN CTOTALT = 0 THEN 0
+  -- Truncate the decimal to two places
   ELSE TRUNC(
+    -- Cast from int to numeric so we get a floating point result here
     CAST(CTOTALM AS NUMERIC) / CTOTALT,
     2)
   END as percent_male,
